@@ -9,21 +9,27 @@
     "lint": "tslint src/**/*.ts",
     "build:dev": "npm run clean && cross-env NODE_ENV=dev webpack",
     "serve:dev": "nodemon  ./build/test-docker-express.js",
-    "watch:dev":
-      "npm-run-all clean lint --parallel  \"build:dev -- --watch\" serve:dev",
+    "watch:dev": "npm-run-all clean lint --parallel  \"build:dev -- --watch\" serve:dev",
     "build:prod": "npm run clean && cross-env NODE_ENV=prod webpack",
     "serve:prod": "nodemon --watch  dist/test-docker-express.min.js",
-    "watch:prod":
-      "npm-run-all clean lint --parallel \"build:prod -- --watch\" serve:prod"
+    "watch:prod": "npm-run-all clean lint --parallel \"build:prod -- --watch\" serve:prod"
   },
-  "keywords": ["docker", "nodejs", "express"],
+  "keywords": [
+    "docker",
+    "nodejs",
+    "express"
+  ],
   "author": "Alexandre Saker",
   "email": "saker.alexandre@gmail.com",
   "license": "MIT",
   "dependencies": {
-    "express": "^4.16.2"
+    "axios": "^0.17.1",
+    "body-parser": "^1.18.2",
+    "express": "^4.16.2",
+    "helmet": "^3.11.0"
   },
   "devDependencies": {
+    "@types/axios": "^0.14.0",
     "@types/node": "^9.4.4",
     "babel-cli": "^6.22.2",
     "babel-loader": "^7.1.2",
