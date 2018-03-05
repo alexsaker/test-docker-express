@@ -48,6 +48,14 @@ docker build -t yourname/test-docker-express .
 docker run -p 49160:8080 yourname/test-docker-express
 ```
 
+### Testing
+
+```
+npm run test
+```
+
+
+
 ## Contributing
 
 Please read [CONTRIBUTING.md](https://gist.github.com/PurpleBooth/b24679402957c63ec426) for details on our code of conduct, and the process for submitting pull requests to us.
