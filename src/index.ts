@@ -7,9 +7,7 @@ const app = express();
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 app.use(helmet());
-app.use("/comments", commentRouter);
-app.use("/posts", postRouter);
-app.get("/", function(req, res) {
-  res.send("hello world");
-});
+app.use("/api/v1/comments", commentRouter);
+app.use("/api/v1/posts", postRouter);
 app.listen(8080);
+export { app };
